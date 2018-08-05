@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="component4.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="../dist/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--单个根元素-->
+        <div v-bind:style="{fontSize: postFontSize +'em'}">
+            <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:post="post"
+                v-on:enlarge-text="postFontSize += 0.1"
+            >
+            </blog-post>
+        </div>
+    </div>
+    <script src="component4.js"></script>
+</body>
+
+</html>

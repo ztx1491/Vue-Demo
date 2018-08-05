@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="component1.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="../dist/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!--因为组件是可复用的 Vue 实例，所以它们与 new Vue 接收相同的选项，
+            例如 data、computed、watch、methods 以及生命周期钩子等。仅有的例外是像 el 这样根实例特有的选项。-->
+        <button-counter></button-counter>
+        <!--组件复用-->
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+    <script src="component1.js"></script>
+</body>
+
+</html>

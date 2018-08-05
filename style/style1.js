@@ -1,0 +1,29 @@
+var vm = new Vue({
+    el: '#app',
+    data: {
+        message: 'hello world!',
+        isActive: true,
+        hasError: false,
+        classObject: {
+            active: true,
+            'text-danger': false
+        }
+    },
+    computed: {
+        classObject: function () {
+            return {
+                active: this.isActive && !this.error,
+                'text-danger': this.error && this.error.type === 'fatal'
+            }
+        }
+    },
+    methods: {
+        changeStyle: function () {
+            if (this.isActive) {
+                this.isActive = false;
+            } else {
+                this.isActive = true;
+            }
+        }
+    }
+});
