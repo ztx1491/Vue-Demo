@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Vue.js - The Progressive JavaScript Framework">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="domevent2.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="../dist/vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <base-input label="姓名"  v-model="message"></base-input>
+        {{message}}
+        <input onfocus="alert(1);" value=""/>
+    </div>
+    <script src="domevent2.js"></script>
+</body>
+
+</html>
